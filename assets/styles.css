@@ -496,3 +496,51 @@ a.card:hover { text-decoration: none; box-shadow: 0 12px 40px rgba(12, 95, 132, 
   .services-nav { gap: 6px; }
   .services-nav a { font-size: .82rem; padding: 7px 14px; }
 }
+
+/* =====================================================
+   RTL SUPPORT (Arabic)
+===================================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+[dir="rtl"] .primary-nav { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .primary-nav > ul { flex-direction: row-reverse; }
+[dir="rtl"] .submenu { left: auto; right: 0; }
+[dir="rtl"] .nav-toggle { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .header-inner { flex-direction: row-reverse; }
+[dir="rtl"] .util-inner { flex-direction: row-reverse; }
+[dir="rtl"] .util-right { flex-direction: row-reverse; }
+[dir="rtl"] .hero .wrap { direction: rtl; }
+[dir="rtl"] .hero h1,
+[dir="rtl"] .hero p { text-align: right; }
+[dir="rtl"] .hero-actions { justify-content: flex-start; }
+[dir="rtl"] .split { direction: rtl; }
+[dir="rtl"] .section-label { flex-direction: row-reverse; }
+[dir="rtl"] .section-label > div { text-align: right; }
+[dir="rtl"] .check li { padding: 6px 32px 6px 0; }
+[dir="rtl"] .check li::before { left: auto; right: 0; }
+[dir="rtl"] .step { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .notice { border-left: 0; border-right: 4px solid var(--blue); }
+[dir="rtl"] .notice.green { border-right-color: var(--green); border-left: 0; }
+[dir="rtl"] .faq summary::after { float: left; }
+[dir="rtl"] .footer-grid { direction: rtl; }
+[dir="rtl"] .foot-contact { text-align: right; }
+[dir="rtl"] .footer-bottom .wrap { flex-direction: row-reverse; }
+[dir="rtl"] .caret { margin-right: 4px; margin-left: 0; }
+[dir="rtl"] .center { text-align: center; }
+[dir="rtl"] .prose { text-align: right; }
+[dir="rtl"] .prose ul { padding-right: 22px; padding-left: 0; }
+[dir="rtl"] .legal-tabs { flex-direction: row-reverse; }
+[dir="rtl"] .services-nav { justify-content: flex-end; }
+[dir="rtl"] .stats-bar { direction: rtl; }
+[dir="rtl"] .card { text-align: right; }
+[dir="rtl"] .svc-card .btn { align-self: flex-end; }
+[dir="rtl"] .btn + .btn { margin-left: 0; margin-right: 12px; }
+@media (max-width: 920px) {
+  [dir="rtl"] .primary-nav {
+    inset: 0 auto 0 0;
+    transform: translateX(-100%);
+  }
+  [dir="rtl"] .primary-nav.open { transform: translateX(0); }
+}
