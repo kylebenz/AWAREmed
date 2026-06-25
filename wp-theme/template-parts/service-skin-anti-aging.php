@@ -1,76 +1,104 @@
-<?php $c = home_url( '/#contact' ); ?>
-<section id="skin-anti-aging" class="service-section" aria-label="Skin and Anti-Aging">
+<?php
+// Repurposed as Nutritional Therapy service page
+$cta = home_url( '/#contact' );
+$related = array(
+  array( 'title' => 'Functional Medicine',   'slug' => 'functional-medicine' ),
+  array( 'title' => 'IV Therapy',            'slug' => 'iv-therapy' ),
+  array( 'title' => 'Weight Management',     'slug' => 'weight-management' ),
+  array( 'title' => 'Diagnostic Testing',    'slug' => 'diagnostic-testing' ),
+);
+?>
+<?php get_header(); ?>
+<main id="main-content">
+
+<section class="service-hero" aria-label="Nutritional Therapy">
   <div class="wrap">
-    <div class="section-label"><div class="section-label-bar orange"></div><div><span class="eyebrow">Service</span><h2 style="margin-bottom:0">Skin &amp; Anti-Aging</h2></div></div>
-    <div class="prose" style="max-width:880px;margin-bottom:32px">
-      <p>Healthy, radiant skin reflects what is happening inside the body. At AWAREmed, skin and anti-aging services pair thoughtful aesthetic options with whole-person wellness &mdash; so support goes deeper than the surface.</p>
-      <p>Dr. Akoury helps you choose appropriate options based on your goals and skin, with honest guidance about what to expect.</p>
-    </div>
-    <div class="notice"><strong>Please note:</strong> Aesthetic results vary from person to person. This page is educational; appropriate services are determined during a consultation.</div>
-    <div class="split" style="margin-top:36px">
-      <div>
-        <span class="eyebrow">How We May Help</span><h3>What this support may include</h3>
-        <p>Every plan is personalized to your history, goals, and clinical findings. Depending on what is appropriate for you, care may include:</p>
-        <ul class="check">
-          <li>Personalized consultation about your skin and aesthetic goals</li>
-          <li>Aesthetic options selected to suit your needs</li>
-          <li>Nutrition and lifestyle support for skin health from the inside out</li>
-          <li>Whole-person approach connecting skin to overall wellness</li>
-          <li>Honest guidance about realistic expectations</li>
-          <li>A plan tailored to you rather than a fixed package</li>
-        </ul>
-      </div>
-      <div><img src="https://assets.cdn.filesafe.space/VICaX0SdHaI41cp5dwWa/media/696a90397f301bde2a82dd54.jpeg" alt="Dr. Dalal Akoury reviewing a personalized care plan with a patient at AWAREmed in Johnson City, TN" width="520" height="400"></div>
-    </div>
-    <div style="max-width:760px;margin:36px auto 0">
-      <div class="center"><span class="eyebrow green">Your Journey</span><h3>What to expect</h3><p class="lead">A clear, unhurried process built around your story.</p></div>
-      <div class="steps" style="margin-top:24px">
-        <div class="step"><div class="n">1</div><div><h3>Your Goals</h3><p>We discuss what you would like to achieve and review your skin and history.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Personalized Options</h3><p>Dr. Akoury recommends appropriate options and explains what to reasonably expect.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Tailored Plan</h3><p>You receive an individualized plan that supports skin health inside and out.</p></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="section-green" style="margin-top:48px;padding:48px 0">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <span class="eyebrow green">Is This Right for You?</span><h3>Who this may be a good fit for</h3>
-          <ul class="check">
-            <li>You want to look and feel your best at any age</li>
-            <li>You prefer a whole-person approach to skin and aging</li>
-            <li>You want honest guidance about realistic results</li>
-            <li>You want options personalized to your goals and skin</li>
-          </ul>
-          <p class="form-note" style="margin-top:16px">This list is for education only and is not a diagnosis.</p>
-        </div>
-        <div class="card">
-          <h3>Physician-led, alongside your existing care</h3>
-          <p>Skin and anti-aging services are personalized and physician-guided, with realistic expectations and whole-person support.</p>
-          <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green" style="margin-top:8px">Schedule a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:48px">
-    <div class="center"><span class="eyebrow">Questions &amp; Answers</span><h3>Frequently Asked Questions</h3></div>
-    <div class="faq" style="max-width:840px;margin:30px auto 0">
-      <details><summary>What services are offered?</summary><p>Options are personalized to your goals and skin. Dr. Akoury reviews appropriate aesthetic and wellness options during your consultation.</p></details>
-      <details><summary>Are results permanent or guaranteed?</summary><p>No. Aesthetic results vary by individual and are not guaranteed. Realistic expectations are part of every plan.</p></details>
-      <details><summary>Do you address skin from the inside out?</summary><p>Yes. We connect skin health to nutrition, lifestyle, and overall wellness, not just surface treatments.</p></details>
-      <details><summary>How do I start?</summary><p>Begin with a consultation so Dr. Akoury can understand your goals and recommend appropriate options.</p></details>
-    </div>
-    <div style="margin-top:48px">
-      <div class="center"><span class="eyebrow green">Explore More</span><h3>Related Services</h3></div>
-      <div class="grid g3" style="margin-top:30px">
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#integrative-oncology' ) ); ?>"><h3>Integrative Oncology Support</h3><p>Supportive, whole-person care alongside your cancer treatment.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#iv-therapy' ) ); ?>"><h3>IV Therapy &amp; Hydration</h3><p>Physician-supervised hydration and nutrient support.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#hormone-optimization' ) ); ?>"><h3>Hormone Optimization (BHRT)</h3><p>A careful look at your full hormonal picture to support balance.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding-bottom:8px">
-      <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green">Book a skin &amp; anti-aging consultation</a>
-      <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="btn btn-outline" style="margin-left:12px">Back to Services</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">Home</a><span aria-hidden="true">/</span>
+      <a href="<?php echo esc_url( home_url('/#services') ); ?>">Services</a><span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Nutritional Therapy</span>
+    </nav>
+    <span class="eyebrow">Therapeutic Nutrition &amp; Supplementation</span>
+    <h1>Nutritional Therapy</h1>
+    <p class="lead">Food is medicine. Through evidence-based therapeutic nutrition and precision supplementation, we optimise the biochemical environment your body needs to heal, function at peak capacity, and thrive for decades.</p>
+    <div class="service-hero-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Physician-supervised</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v1m0 16v1"/><circle cx="12" cy="12" r="4"/></svg> Lab-guided protocols</span>
     </div>
   </div>
 </section>
+
+<section class="service-content">
+  <div class="wrap">
+    <div class="service-layout">
+      <div class="service-main">
+
+        <h2>Nutrition as Medicine: The AWAREmed Approach</h2>
+        <p>Nutrition is the most powerful medicine available — yet it is one of the most overlooked tools in conventional healthcare. Every cellular process in your body depends on the availability of specific nutrients: vitamins, minerals, amino acids, fatty acids, and phytonutrients.</p>
+        <p>At AWAREmed, nutritional therapy goes far beyond generic dietary advice. Dr. Akoury uses advanced nutritional testing to identify your specific deficiencies and imbalances, then designs a therapeutic nutrition protocol — including dietary changes and targeted supplementation — to address your unique biochemical needs.</p>
+
+        <h2>What Nutritional Therapy Can Address</h2>
+        <ul>
+          <li>Chronic fatigue and low energy (mitochondrial dysfunction)</li>
+          <li>Inflammatory conditions (arthritis, autoimmunity, IBD)</li>
+          <li>Cardiovascular disease risk (cholesterol, blood pressure, arterial inflammation)</li>
+          <li>Blood sugar dysregulation and insulin resistance</li>
+          <li>Cognitive decline, brain fog, and mood disorders</li>
+          <li>Gut health disorders (IBS, leaky gut, SIBO)</li>
+          <li>Hormonal imbalances influenced by nutritional status</li>
+          <li>Immune system dysfunction and recurrent infections</li>
+          <li>Skin conditions (eczema, psoriasis, acne)</li>
+          <li>Bone health and osteoporosis prevention</li>
+        </ul>
+
+        <h2>Our Nutritional Therapy Services</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card"><h4>Micronutrient Testing</h4><p>Intracellular testing to identify precisely which vitamins, minerals, amino acids, and antioxidants are deficient at the cellular level — not just in serum.</p></div>
+          <div class="benefit-card"><h4>Food Sensitivity Testing</h4><p>IgG and IgA food reactivity testing to identify specific foods triggering chronic inflammation, gut dysfunction, and systemic symptoms.</p></div>
+          <div class="benefit-card"><h4>Therapeutic Dietary Protocols</h4><p>Evidence-based dietary plans tailored to your condition — anti-inflammatory, elimination, ketogenic, Mediterranean, or other therapeutic approaches as clinically indicated.</p></div>
+          <div class="benefit-card"><h4>Precision Supplementation</h4><p>Pharmaceutical-grade, clinically dosed supplement protocols targeting your specific deficiencies and therapeutic goals — not generic multivitamins.</p></div>
+          <div class="benefit-card"><h4>Gut Microbiome Nutrition</h4><p>Prebiotic and probiotic strategies, along with dietary fibre and phytonutrient planning, to cultivate a diverse, health-promoting gut microbiome.</p></div>
+          <div class="benefit-card"><h4>Detoxification Nutrition</h4><p>Dietary and supplementation support for the liver's phase I and II detoxification pathways, enhancing the body's ability to process and eliminate toxins.</p></div>
+        </div>
+
+        <h2>The Nutritional Therapy Process</h2>
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Nutritional Assessment</h4><p>Detailed dietary recall, symptom review, and health goals discussion. We understand your food preferences, cultural background, and any dietary restrictions before making recommendations.</p></div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Advanced Nutritional Testing</h4><p>Micronutrient testing, food sensitivity panels, and other relevant labs to identify the specific nutritional imbalances driving your symptoms.</p></div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Personalised Nutrition Protocol</h4><p>A comprehensive, practical nutrition plan with specific dietary guidelines, supplement protocols, meal planning guidance, and tips for sustainable implementation.</p></div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Ongoing Coaching &amp; Follow-Up</h4><p>Regular check-ins to track progress, address challenges, refine your protocol, and repeat testing as needed to confirm nutritional optimisation.</p></div></div>
+        </div>
+
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-cta">
+          <h3>Optimise Your Nutrition</h3>
+          <p>Book a nutritional therapy consultation with Dr. Akoury today.</p>
+          <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-primary">Book Consultation</a>
+          <div class="sidebar-contact"><a href="tel:+14234306170">(423) 430-6170</a></div>
+        </div>
+        <div class="related-services">
+          <h4>Related Services</h4>
+          <?php foreach ( $related as $svc ) : ?>
+          <a class="related-link" href="<?php echo esc_url( home_url('/services/'.$svc['slug'].'/') ); ?>">
+            <?php echo esc_html( $svc['title'] ); ?>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grad-teal);padding:64px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="color:#fff;margin-bottom:16px">Let Food Be Your Medicine</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 32px">Discover how precision nutritional therapy can transform your health at the cellular level. Book your consultation with Dr. Akoury today.</p>
+    <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff">Book Nutrition Consultation</a>
+  </div>
+</section>
+
+</main>
+<?php get_footer(); ?>

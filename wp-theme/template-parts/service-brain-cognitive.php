@@ -1,76 +1,100 @@
-<?php $c = home_url( '/#contact' ); ?>
-<section id="brain-cognitive" class="section-soft service-section" aria-label="Brain and Cognitive Wellness">
+<?php
+// Repurposed as Preventive Care service page
+$cta = home_url( '/#contact' );
+$related = array(
+  array( 'title' => 'Functional Medicine',   'slug' => 'functional-medicine' ),
+  array( 'title' => 'Diagnostic Testing',    'slug' => 'diagnostic-testing' ),
+  array( 'title' => 'Nutritional Therapy',   'slug' => 'nutritional-therapy' ),
+  array( 'title' => 'Weight Management',     'slug' => 'weight-management' ),
+);
+?>
+<?php get_header(); ?>
+<main id="main-content">
+
+<section class="service-hero" aria-label="Preventive Care">
   <div class="wrap">
-    <div class="section-label"><div class="section-label-bar green"></div><div><span class="eyebrow">Service</span><h2 style="margin-bottom:0">Brain &amp; Cognitive Wellness</h2></div></div>
-    <div class="prose" style="max-width:880px;margin-bottom:32px">
-      <p>Focus, memory, and mood are deeply connected to your overall biology &mdash; including sleep, nutrition, hormones, inflammation, and metabolic health. At AWAREmed, brain and cognitive wellness support takes a whole-person view of what may be affecting your clarity and mood.</p>
-      <p>Dr. Akoury explores contributors that conventional approaches sometimes overlook, and builds a personalized plan designed to support cognitive wellness.</p>
-    </div>
-    <div class="notice"><strong>Please note:</strong> This page is educational and is not a substitute for mental health or neurological care. If you are experiencing a mental health crisis, please contact a qualified professional or emergency services.</div>
-    <div class="split" style="margin-top:36px">
-      <div>
-        <span class="eyebrow">How We May Help</span><h3>What this support may include</h3>
-        <p>Every plan is personalized to your history, goals, and clinical findings. Depending on what is appropriate for you, care may include:</p>
-        <ul class="check">
-          <li>Whole-person review of factors affecting focus, memory, and mood</li>
-          <li>Support addressing sleep, nutrition, and metabolic contributors</li>
-          <li>Evaluation of hormonal and inflammatory factors where relevant</li>
-          <li>Lifestyle strategies designed to support mental clarity</li>
-          <li>Education about the mind&ndash;body connection</li>
-          <li>Coordination with your mental health or neurology providers when appropriate</li>
-        </ul>
-      </div>
-      <div><img src="https://assets.cdn.filesafe.space/VICaX0SdHaI41cp5dwWa/media/696a90397f301bde2a82dd54.jpeg" alt="Dr. Dalal Akoury reviewing a personalized care plan with a patient at AWAREmed in Johnson City, TN" width="520" height="400"></div>
-    </div>
-    <div style="max-width:760px;margin:36px auto 0">
-      <div class="center"><span class="eyebrow green">Your Journey</span><h3>What to expect</h3><p class="lead">A clear, unhurried process built around your story.</p></div>
-      <div class="steps" style="margin-top:24px">
-        <div class="step"><div class="n">1</div><div><h3>Listening First</h3><p>We review how you feel and the factors that may be affecting your clarity and mood.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Whole-Person Assessment</h3><p>Dr. Akoury looks at contributors such as sleep, nutrition, hormones, and inflammation.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Personalized Plan</h3><p>You receive an individualized plan to support cognitive wellness, with ongoing guidance.</p></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="section-green" style="margin-top:48px;padding:48px 0">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <span class="eyebrow green">Is This Right for You?</span><h3>Who this may be a good fit for</h3>
-          <ul class="check">
-            <li>You experience brain fog, low focus, or shifting mood</li>
-            <li>You want a whole-person approach that considers biology and lifestyle</li>
-            <li>You prefer care that coordinates with your existing providers</li>
-            <li>You want education and a personalized, supportive plan</li>
-          </ul>
-          <p class="form-note" style="margin-top:16px">This list is for education only and is not a diagnosis.</p>
-        </div>
-        <div class="card">
-          <h3>Physician-led, alongside your existing care</h3>
-          <p>Brain and cognitive wellness support complements &mdash; it does not replace &mdash; mental health and neurological care. Dr. Akoury coordinates with your providers when appropriate.</p>
-          <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green" style="margin-top:8px">Schedule a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:48px">
-    <div class="center"><span class="eyebrow">Questions &amp; Answers</span><h3>Frequently Asked Questions</h3></div>
-    <div class="faq" style="max-width:840px;margin:30px auto 0">
-      <details><summary>Is this a substitute for therapy or psychiatry?</summary><p>No. This is supportive, whole-person care that complements mental health and neurological treatment. Continue working with those providers.</p></details>
-      <details><summary>What might be contributing to brain fog?</summary><p>Many factors can play a role, including sleep, nutrition, hormones, inflammation, and metabolic health. Dr. Akoury evaluates these individually.</p></details>
-      <details><summary>Do you prescribe psychiatric medication?</summary><p>Care is individualized. Dr. Akoury will discuss appropriate options and coordinate with your other providers as needed.</p></details>
-      <details><summary>Are outcomes guaranteed?</summary><p>No. Individual responses vary and outcomes are not guaranteed.</p></details>
-    </div>
-    <div style="margin-top:48px">
-      <div class="center"><span class="eyebrow green">Explore More</span><h3>Related Services</h3></div>
-      <div class="grid g3" style="margin-top:30px">
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#integrative-oncology' ) ); ?>"><h3>Integrative Oncology Support</h3><p>Supportive, whole-person care alongside your cancer treatment.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#iv-therapy' ) ); ?>"><h3>IV Therapy &amp; Hydration</h3><p>Physician-supervised hydration and nutrient support.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#hormone-optimization' ) ); ?>"><h3>Hormone Optimization (BHRT)</h3><p>A careful look at your full hormonal picture to support balance.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding-bottom:8px">
-      <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green">Explore whole-person cognitive wellness</a>
-      <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="btn btn-outline" style="margin-left:12px">Back to Services</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">Home</a><span aria-hidden="true">/</span>
+      <a href="<?php echo esc_url( home_url('/#services') ); ?>">Services</a><span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Preventive Care</span>
+    </nav>
+    <span class="eyebrow">Proactive Health Optimisation</span>
+    <h1>Preventive Care</h1>
+    <p class="lead">The best disease is the one you never develop. Our comprehensive preventive care programs identify risk factors years before symptoms appear, giving you the knowledge and tools to protect your future health.</p>
+    <div class="service-hero-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Evidence-based prevention</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Physician-supervised</span>
     </div>
   </div>
 </section>
+
+<section class="service-content">
+  <div class="wrap">
+    <div class="service-layout">
+      <div class="service-main">
+
+        <h2>The Future of Medicine Is Prevention</h2>
+        <p>Conventional medicine excels at treating disease — but what if you could prevent disease from developing in the first place? Preventive care at AWAREmed is rooted in the principle that chronic diseases like cardiovascular disease, diabetes, cancer, and neurodegeneration develop over decades, and that early intervention can dramatically change your health trajectory.</p>
+        <p>Dr. Akoury combines advanced biomarker screening, genetic analysis, and personalised wellness programming to help you identify your risks and take meaningful action before disease takes hold.</p>
+
+        <h2>What's Included in Our Preventive Care Assessment</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card"><h4>Advanced Cardiovascular Risk Panel</h4><p>Beyond standard cholesterol — we measure ApoB, Lp(a), oxidised LDL, hs-CRP, homocysteine, and other markers that reveal true cardiovascular risk.</p></div>
+          <div class="benefit-card"><h4>Cancer Risk Profiling</h4><p>Epigenetic testing, inflammatory markers, and cancer-related biomarkers to identify elevated risk early when intervention is most effective.</p></div>
+          <div class="benefit-card"><h4>Metabolic Health Assessment</h4><p>Comprehensive evaluation of insulin sensitivity, blood sugar regulation, metabolic syndrome risk, and pre-diabetes indicators.</p></div>
+          <div class="benefit-card"><h4>Brain Health &amp; Cognitive Screening</h4><p>Assessment of neuroinflammation, cognitive biomarkers, and lifestyle risk factors for Alzheimer's and other neurodegenerative conditions.</p></div>
+          <div class="benefit-card"><h4>Bone Density &amp; Musculoskeletal Health</h4><p>DEXA scan interpretation, bone turnover markers, and muscle health assessment to prevent osteoporosis and sarcopenia.</p></div>
+          <div class="benefit-card"><h4>Gut-Immune Axis Evaluation</h4><p>Assessment of gut microbiome diversity, intestinal permeability, and immune function — the foundation of long-term preventive health.</p></div>
+        </div>
+
+        <h2>Who Should Prioritise Preventive Care?</h2>
+        <ul>
+          <li>Adults over 35 seeking to proactively protect their long-term health</li>
+          <li>Individuals with a family history of heart disease, cancer, diabetes, or dementia</li>
+          <li>High-achieving professionals seeking to maintain peak cognitive and physical performance</li>
+          <li>Anyone who wants to understand their biological age versus chronological age</li>
+          <li>Patients who have been told they are "pre-diabetic" or have borderline risk factors</li>
+          <li>Those interested in longevity science and health span optimisation</li>
+        </ul>
+
+        <h2>Our Preventive Care Process</h2>
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Risk Factor &amp; History Review</h4><p>Comprehensive review of your personal and family medical history, lifestyle, diet, stress levels, and environmental exposures to map your individual risk landscape.</p></div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Advanced Preventive Testing</h4><p>Targeted laboratory panels, optional genetic testing, and biomarker screening designed to surface risks years or decades before conventional screening would detect them.</p></div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Personalised Prevention Plan</h4><p>A detailed, actionable roadmap covering nutrition, supplementation, exercise, sleep, stress management, environmental modifications, and any necessary medical interventions.</p></div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Annual Monitoring &amp; Updates</h4><p>Your prevention plan evolves as your health and life circumstances change. Annual re-assessments ensure your strategy remains current and effective.</p></div></div>
+        </div>
+
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-cta">
+          <h3>Invest in Your Future Health</h3>
+          <p>Book a comprehensive preventive care assessment with Dr. Akoury.</p>
+          <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-primary">Book Consultation</a>
+          <div class="sidebar-contact"><a href="tel:+14234306170">(423) 430-6170</a></div>
+        </div>
+        <div class="related-services">
+          <h4>Related Services</h4>
+          <?php foreach ( $related as $svc ) : ?>
+          <a class="related-link" href="<?php echo esc_url( home_url('/services/'.$svc['slug'].'/') ); ?>">
+            <?php echo esc_html( $svc['title'] ); ?>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grad-teal);padding:64px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="color:#fff;margin-bottom:16px">Don't Wait for Disease — Prevent It</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 32px">Book a comprehensive preventive care assessment and take control of your health destiny before disease takes control of you.</p>
+    <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff">Book Preventive Assessment</a>
+  </div>
+</section>
+
+</main>
+<?php get_footer(); ?>

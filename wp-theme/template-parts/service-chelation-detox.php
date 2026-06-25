@@ -1,76 +1,100 @@
-<?php $c = home_url( '/#contact' ); ?>
-<section id="chelation-detox" class="section-soft service-section" aria-label="Chelation and Detoxification Support">
+<?php
+// Repurposed as Diagnostic Testing service page
+$cta = home_url( '/#contact' );
+$related = array(
+  array( 'title' => 'Functional Medicine',   'slug' => 'functional-medicine' ),
+  array( 'title' => 'Preventive Care',       'slug' => 'preventive-care' ),
+  array( 'title' => 'Hormone Optimization',  'slug' => 'hormone-optimization' ),
+  array( 'title' => 'Weight Management',     'slug' => 'weight-management' ),
+);
+?>
+<?php get_header(); ?>
+<main id="main-content">
+
+<section class="service-hero" aria-label="Diagnostic Testing">
   <div class="wrap">
-    <div class="section-label"><div class="section-label-bar green"></div><div><span class="eyebrow">Service</span><h2 style="margin-bottom:0">Chelation &amp; Detoxification Support</h2></div></div>
-    <div class="prose" style="max-width:880px;margin-bottom:32px">
-      <p>Detoxification support focuses on helping the body's natural elimination systems function well. At AWAREmed, any chelation or detoxification support is physician-supervised, individualized, and carefully monitored for safety.</p>
-      <p>Dr. Akoury will assess whether these approaches are appropriate for you, explain the considerations clearly, and coordinate with the rest of your care.</p>
-    </div>
-    <div class="notice"><strong>Please note:</strong> Chelation and detoxification support require careful clinical evaluation and are not appropriate for everyone. These services are supportive and are not intended to diagnose, treat, cure, or prevent disease.</div>
-    <div class="split" style="margin-top:36px">
-      <div>
-        <span class="eyebrow">How We May Help</span><h3>What this support may include</h3>
-        <p>Every plan is personalized to your history, goals, and clinical findings. Depending on what is appropriate for you, care may include:</p>
-        <ul class="check">
-          <li>Careful clinical assessment to determine whether support is appropriate</li>
-          <li>Personalized detoxification support focused on the body's natural pathways</li>
-          <li>Nutritional and lifestyle strategies that support elimination and well-being</li>
-          <li>Physician supervision and monitoring throughout</li>
-          <li>Clear education about benefits, limits, and safety considerations</li>
-          <li>Coordination with your broader wellness plan</li>
-        </ul>
-      </div>
-      <div><img src="https://assets.cdn.filesafe.space/VICaX0SdHaI41cp5dwWa/media/696a90397f301bde2a82dd54.jpeg" alt="Dr. Dalal Akoury reviewing a personalized care plan with a patient at AWAREmed in Johnson City, TN" width="520" height="400"></div>
-    </div>
-    <div style="max-width:760px;margin:36px auto 0">
-      <div class="center"><span class="eyebrow green">Your Journey</span><h3>What to expect</h3><p class="lead">A clear, unhurried process built around your story.</p></div>
-      <div class="steps" style="margin-top:24px">
-        <div class="step"><div class="n">1</div><div><h3>Evaluation</h3><p>We review your history and goals to determine whether detoxification support is appropriate and safe for you.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Personalized Plan</h3><p>Dr. Akoury designs an individualized, monitored plan and explains every step.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Monitored Support</h3><p>Your plan is supervised and adjusted with safety as the priority.</p></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="section-green" style="margin-top:48px;padding:48px 0">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <span class="eyebrow green">Is This Right for You?</span><h3>Who this may be a good fit for</h3>
-          <ul class="check">
-            <li>You want physician-supervised, carefully monitored detoxification support</li>
-            <li>You prefer an individualized plan rather than a generic cleanse</li>
-            <li>You want clear education about what is and is not appropriate</li>
-            <li>You are looking for support as part of a whole-person wellness plan</li>
-          </ul>
-          <p class="form-note" style="margin-top:16px">This list is for education only and is not a diagnosis.</p>
-        </div>
-        <div class="card">
-          <h3>Physician-led, alongside your existing care</h3>
-          <p>Detoxification support is one possible part of a personalized plan. Dr. Akoury prioritizes safety, monitoring, and honest expectations.</p>
-          <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green" style="margin-top:8px">Schedule a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:48px">
-    <div class="center"><span class="eyebrow">Questions &amp; Answers</span><h3>Frequently Asked Questions</h3></div>
-    <div class="faq" style="max-width:840px;margin:30px auto 0">
-      <details><summary>Is chelation right for everyone?</summary><p>No. Chelation and detoxification support are not appropriate for everyone and require careful clinical evaluation.</p></details>
-      <details><summary>Is it safe?</summary><p>Safety is the priority. These services are physician-supervised and monitored. Appropriateness is determined individually.</p></details>
-      <details><summary>Will detox cure a disease?</summary><p>No. Detoxification support is supportive and is not intended to diagnose, treat, cure, or prevent disease.</p></details>
-      <details><summary>How is my plan monitored?</summary><p>Dr. Akoury supervises your plan and adjusts it over time, with safety and your individual response guiding decisions.</p></details>
-    </div>
-    <div style="margin-top:48px">
-      <div class="center"><span class="eyebrow green">Explore More</span><h3>Related Services</h3></div>
-      <div class="grid g3" style="margin-top:30px">
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#integrative-oncology' ) ); ?>"><h3>Integrative Oncology Support</h3><p>Supportive, whole-person care alongside your cancer treatment.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#iv-therapy' ) ); ?>"><h3>IV Therapy &amp; Hydration</h3><p>Physician-supervised hydration and nutrient support.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#hormone-optimization' ) ); ?>"><h3>Hormone Optimization (BHRT)</h3><p>A careful look at your full hormonal picture to support balance.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding-bottom:8px">
-      <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green">Ask whether detoxification support is appropriate</a>
-      <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="btn btn-outline" style="margin-left:12px">Back to Services</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">Home</a><span aria-hidden="true">/</span>
+      <a href="<?php echo esc_url( home_url('/#services') ); ?>">Services</a><span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Diagnostic Testing</span>
+    </nav>
+    <span class="eyebrow">Advanced Laboratory &amp; Biomarker Analysis</span>
+    <h1>Diagnostic Testing</h1>
+    <p class="lead">See your health with unprecedented clarity. Our advanced diagnostic panels go far beyond standard blood tests to reveal hidden imbalances, deficiencies, and dysfunctions — giving Dr. Akoury the precise data needed to craft your personalised treatment plan.</p>
+    <div class="service-hero-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> CLIA-certified labs</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Physician-interpreted results</span>
     </div>
   </div>
 </section>
+
+<section class="service-content">
+  <div class="wrap">
+    <div class="service-layout">
+      <div class="service-main">
+
+        <h2>Why Standard Testing Falls Short</h2>
+        <p>Conventional laboratory testing is designed to identify disease — not to optimise health. Standard "normal ranges" represent the average of a population that includes many unhealthy individuals, and are therefore not representative of optimal function. Patients frequently receive "normal" results while experiencing significant symptoms of dysfunction.</p>
+        <p>At AWAREmed, we use advanced functional laboratory testing interpreted against optimal reference ranges — giving you a much more meaningful picture of your health. We also use specialty labs that offer tests unavailable through conventional medicine.</p>
+
+        <h2>Our Advanced Diagnostic Panel Options</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card"><h4>Comprehensive Metabolic &amp; Nutritional Panel</h4><p>Full metabolic panel plus micronutrient assessment covering vitamins, minerals, amino acids, fatty acids, and antioxidants at the intracellular level.</p></div>
+          <div class="benefit-card"><h4>Full Hormonal Assessment</h4><p>Comprehensive evaluation of sex hormones, adrenal hormones, thyroid hormones, and metabolic hormones — with free and bound fractions where clinically relevant.</p></div>
+          <div class="benefit-card"><h4>Gut Microbiome &amp; GI Health</h4><p>Stool analysis identifying the composition of your gut bacteria, presence of pathogens, digestive enzyme function, intestinal inflammation, and leaky gut markers.</p></div>
+          <div class="benefit-card"><h4>Environmental Toxin &amp; Heavy Metal Screening</h4><p>Testing for mercury, lead, arsenic, cadmium, and other heavy metals, as well as pesticides, BPA, phthalates, and other environmental chemical exposures.</p></div>
+          <div class="benefit-card"><h4>Genetic &amp; Nutrigenomic Testing</h4><p>DNA analysis revealing how your genetic variants affect hormone metabolism, detoxification pathways, nutrient utilisation, cardiovascular risk, and medication responses.</p></div>
+          <div class="benefit-card"><h4>Advanced Cardiovascular Panel</h4><p>Beyond standard lipids — particle size and number, Lp(a), oxidised LDL, ApoB, endothelial function markers, and inflammatory cardiovascular risk factors.</p></div>
+        </div>
+
+        <h2>How We Use Your Test Results</h2>
+        <ul>
+          <li>All results are reviewed by Dr. Akoury personally, not delegated to staff</li>
+          <li>Results are interpreted against optimal ranges, not just conventional "normal"</li>
+          <li>A comprehensive results review appointment is scheduled to walk you through all findings</li>
+          <li>Lab data is integrated with your symptoms, history, and lifestyle context</li>
+          <li>Testing directly informs every personalised treatment recommendation</li>
+          <li>Follow-up testing tracks the impact of your interventions over time</li>
+        </ul>
+
+        <h2>The Diagnostic Process</h2>
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Clinical Assessment</h4><p>Dr. Akoury reviews your symptoms, history, and goals to determine which specific tests will provide the most clinically useful information for your situation.</p></div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Sample Collection</h4><p>Most tests require blood, urine, saliva, or stool collection. We use CLIA-certified specialty laboratories to ensure the highest accuracy and reliability.</p></div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Results Interpretation</h4><p>Dr. Akoury personally reviews all results, identifying patterns and connections across multiple systems that reveal root causes and treatment priorities.</p></div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Treatment Planning</h4><p>A detailed treatment plan is created based on your test results, ensuring every intervention is evidence-based and precisely targeted to your individual biology.</p></div></div>
+        </div>
+
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-cta">
+          <h3>Get the Full Picture of Your Health</h3>
+          <p>Book advanced diagnostic testing with Dr. Akoury today.</p>
+          <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-primary">Book Consultation</a>
+          <div class="sidebar-contact"><a href="tel:+14234306170">(423) 430-6170</a></div>
+        </div>
+        <div class="related-services">
+          <h4>Related Services</h4>
+          <?php foreach ( $related as $svc ) : ?>
+          <a class="related-link" href="<?php echo esc_url( home_url('/services/'.$svc['slug'].'/') ); ?>">
+            <?php echo esc_html( $svc['title'] ); ?>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grad-teal);padding:64px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="color:#fff;margin-bottom:16px">Knowledge Is the Foundation of Health</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 32px">Advanced diagnostic testing gives Dr. Akoury the precise data needed to create a truly personalised treatment plan. Book your assessment today.</p>
+    <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff">Start with Advanced Testing</a>
+  </div>
+</section>
+
+</main>
+<?php get_footer(); ?>

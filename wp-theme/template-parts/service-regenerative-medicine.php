@@ -1,76 +1,102 @@
-<?php $c = home_url( '/#contact' ); ?>
-<section id="regenerative-medicine" class="service-section" aria-label="Regenerative Medicine">
+<?php
+$cta = home_url( '/#contact' );
+$related = array(
+  array( 'title' => 'Functional Medicine',  'slug' => 'functional-medicine' ),
+  array( 'title' => 'IV Therapy',           'slug' => 'iv-therapy' ),
+  array( 'title' => 'Hormone Optimization', 'slug' => 'hormone-optimization' ),
+  array( 'title' => 'Preventive Care',      'slug' => 'preventive-care' ),
+);
+?>
+<?php get_header(); ?>
+<main id="main-content">
+
+<section class="service-hero" aria-label="Regenerative Medicine">
   <div class="wrap">
-    <div class="section-label"><div class="section-label-bar"></div><div><span class="eyebrow">Service</span><h2 style="margin-bottom:0">Regenerative Medicine</h2></div></div>
-    <div class="prose" style="max-width:880px;margin-bottom:32px">
-      <p>Regenerative medicine focuses on supporting the body's natural ability to repair and renew itself. At AWAREmed, regenerative and anti-aging approaches are physician-led and personalized &mdash; chosen based on your goals, your history, and current evidence.</p>
-      <p>Dr. Akoury will explain which supportive options may be appropriate for you and what to reasonably expect, so your decisions are informed and grounded.</p>
-    </div>
-    <div class="notice"><strong>Please note:</strong> Regenerative approaches vary in their level of supporting evidence. Dr. Akoury will discuss what is appropriate, what the evidence shows, and what is not promised. Nothing here is a guarantee of results.</div>
-    <div class="split" style="margin-top:36px">
-      <div>
-        <span class="eyebrow">How We May Help</span><h3>What this support may include</h3>
-        <p>Every plan is personalized to your history, goals, and clinical findings. Depending on what is appropriate for you, care may include:</p>
-        <ul class="check">
-          <li>Personalized review of your goals for recovery, vitality, and healthy aging</li>
-          <li>Education about regenerative and anti-aging options and their evidence</li>
-          <li>Lifestyle, nutrition, and metabolic strategies that support cellular health</li>
-          <li>Supportive therapies selected on an individual basis</li>
-          <li>Honest discussion of benefits, limits, and realistic expectations</li>
-          <li>Coordination with your other care when relevant</li>
-        </ul>
-      </div>
-      <div><img src="https://assets.cdn.filesafe.space/VICaX0SdHaI41cp5dwWa/media/696a90397f301bde2a82dd54.jpeg" alt="Dr. Dalal Akoury reviewing a personalized care plan with a patient at AWAREmed in Johnson City, TN" width="520" height="400"></div>
-    </div>
-    <div style="max-width:760px;margin:36px auto 0">
-      <div class="center"><span class="eyebrow green">Your Journey</span><h3>What to expect</h3><p class="lead">A clear, unhurried process built around your story.</p></div>
-      <div class="steps" style="margin-top:24px">
-        <div class="step"><div class="n">1</div><div><h3>Goals &amp; History</h3><p>We discuss what you hope to achieve and review your relevant health history.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Evidence-Informed Options</h3><p>Dr. Akoury explains appropriate options, including what the current evidence does and does not support.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Personalized Plan</h3><p>You receive an individualized plan with realistic expectations and ongoing guidance.</p></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="section-green" style="margin-top:48px;padding:48px 0">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <span class="eyebrow green">Is This Right for You?</span><h3>Who this may be a good fit for</h3>
-          <ul class="check">
-            <li>You are focused on healthy aging and long-term vitality</li>
-            <li>You want recovery and wellness support guided by a physician</li>
-            <li>You prefer honest, evidence-informed conversations about your options</li>
-            <li>You want a personalized plan rather than a generic protocol</li>
-          </ul>
-          <p class="form-note" style="margin-top:16px">This list is for education only and is not a diagnosis.</p>
-        </div>
-        <div class="card">
-          <h3>Physician-led, alongside your existing care</h3>
-          <p>Regenerative medicine at AWAREmed is supportive and individualized. Dr. Akoury emphasizes informed decisions and realistic expectations over promises.</p>
-          <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green" style="margin-top:8px">Schedule a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:48px">
-    <div class="center"><span class="eyebrow">Questions &amp; Answers</span><h3>Frequently Asked Questions</h3></div>
-    <div class="faq" style="max-width:840px;margin:30px auto 0">
-      <details><summary>What does &ldquo;regenerative medicine&rdquo; include?</summary><p>It refers to approaches that aim to support the body's natural repair and renewal. The specific options discussed are individualized and evidence-informed.</p></details>
-      <details><summary>Will this reverse aging?</summary><p>No. We do not claim to reverse aging or disease. The focus is on supporting vitality and healthy aging with honest expectations.</p></details>
-      <details><summary>How do I know what is right for me?</summary><p>Dr. Akoury reviews your goals and history and explains which supportive options are appropriate for you.</p></details>
-      <details><summary>Are results guaranteed?</summary><p>No. Individual results vary and are not guaranteed.</p></details>
-    </div>
-    <div style="margin-top:48px">
-      <div class="center"><span class="eyebrow green">Explore More</span><h3>Related Services</h3></div>
-      <div class="grid g3" style="margin-top:30px">
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#integrative-oncology' ) ); ?>"><h3>Integrative Oncology Support</h3><p>Supportive, whole-person care alongside your cancer treatment.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#iv-therapy' ) ); ?>"><h3>IV Therapy &amp; Hydration</h3><p>Physician-supervised hydration and nutrient support.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#hormone-optimization' ) ); ?>"><h3>Hormone Optimization (BHRT)</h3><p>A careful look at your full hormonal picture to support balance.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding-bottom:8px">
-      <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green">Discuss a personalized regenerative plan</a>
-      <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="btn btn-outline" style="margin-left:12px">Back to Services</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">Home</a><span aria-hidden="true">/</span>
+      <a href="<?php echo esc_url( home_url('/#services') ); ?>">Services</a><span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Regenerative Medicine</span>
+    </nav>
+    <span class="eyebrow">Advanced Healing Therapies</span>
+    <h1>Regenerative Medicine</h1>
+    <p class="lead">Harness your body's own extraordinary healing intelligence. Our regenerative protocols — including PRP, peptide therapy, and exosomes — restore tissue, reduce inflammation, and reverse the cellular effects of aging and injury.</p>
+    <div class="service-hero-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Physician-supervised</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg> Minimally invasive</span>
     </div>
   </div>
 </section>
+
+<section class="service-content">
+  <div class="wrap">
+    <div class="service-layout">
+      <div class="service-main">
+
+        <h2>What Is Regenerative Medicine?</h2>
+        <p>Regenerative medicine harnesses biological mechanisms to repair, regenerate, or replace damaged tissues and cells. Rather than simply managing symptoms, regenerative therapies aim to restore normal function by stimulating the body's own healing processes.</p>
+        <p>At AWAREmed, Dr. Akoury combines the latest evidence-based regenerative protocols with her deep expertise in integrative medicine to offer treatments that address musculoskeletal injuries, chronic pain, autoimmune conditions, neurodegeneration, and the cellular effects of aging.</p>
+
+        <h2>Our Regenerative Medicine Therapies</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card"><h4>Platelet-Rich Plasma (PRP)</h4><p>A concentration of your own growth factors, extracted from your blood and reinjected to accelerate healing of joints, tendons, ligaments, and skin.</p></div>
+          <div class="benefit-card"><h4>Peptide Therapy</h4><p>Short-chain amino acid sequences that signal cellular repair, fat loss, muscle growth, immune regulation, and growth hormone release.</p></div>
+          <div class="benefit-card"><h4>Exosome Therapy</h4><p>Cell-derived vesicles that carry powerful regenerative signals, reducing inflammation and promoting tissue repair at the molecular level.</p></div>
+          <div class="benefit-card"><h4>Ozone Therapy</h4><p>Medical ozone stimulates oxygen metabolism, reduces inflammatory burden, and creates an environment hostile to pathogens while supporting regeneration.</p></div>
+          <div class="benefit-card"><h4>Prolotherapy</h4><p>An injection of dextrose solution that triggers a localised healing response in loose or damaged ligaments and tendons.</p></div>
+          <div class="benefit-card"><h4>Growth Factor Therapy</h4><p>Targeted delivery of specific growth factors to stimulate cellular renewal, collagen production, and tissue restoration throughout the body.</p></div>
+        </div>
+
+        <h2>Conditions Treated</h2>
+        <ul>
+          <li>Joint pain and osteoarthritis (knee, hip, shoulder)</li>
+          <li>Tendon and ligament injuries</li>
+          <li>Chronic musculoskeletal pain and sports injuries</li>
+          <li>Neurodegenerative conditions and cognitive decline</li>
+          <li>Autoimmune and inflammatory disorders</li>
+          <li>Sexual dysfunction and hormonal decline</li>
+          <li>Skin aging, hair loss, and wound healing</li>
+          <li>Post-surgical recovery acceleration</li>
+          <li>Chronic fatigue and mitochondrial dysfunction</li>
+        </ul>
+
+        <h2>The Process</h2>
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Comprehensive Evaluation</h4><p>Dr. Akoury evaluates your symptoms, medical history, and imaging to determine which regenerative therapies are most appropriate for your condition.</p></div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Personalised Protocol Design</h4><p>A customised regenerative program is designed, potentially combining multiple modalities — e.g., PRP with peptides and nutritional support.</p></div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>In-Office Procedure</h4><p>Most regenerative treatments are performed in our comfortable Johnson City clinic with minimal downtime. Local anesthetic is used where appropriate.</p></div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Recovery &amp; Monitoring</h4><p>Post-procedure guidance is provided, and Dr. Akoury monitors your healing response closely, adjusting your protocol based on progress.</p></div></div>
+        </div>
+
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-cta">
+          <h3>Explore Regenerative Options</h3>
+          <p>Discover which regenerative therapies are right for your condition.</p>
+          <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-primary">Book Consultation</a>
+          <div class="sidebar-contact"><a href="tel:+14234306170">(423) 430-6170</a></div>
+        </div>
+        <div class="related-services">
+          <h4>Related Services</h4>
+          <?php foreach ( $related as $svc ) : ?>
+          <a class="related-link" href="<?php echo esc_url( home_url('/services/'.$svc['slug'].'/') ); ?>">
+            <?php echo esc_html( $svc['title'] ); ?>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grad-teal);padding:64px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="color:#fff;margin-bottom:16px">Activate Your Body's Healing Potential</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 32px">Schedule a regenerative medicine consultation and discover how advanced healing therapies can restore your function and vitality.</p>
+    <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff">Book Consultation</a>
+  </div>
+</section>
+
+</main>
+<?php get_footer(); ?>

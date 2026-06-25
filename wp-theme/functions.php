@@ -36,7 +36,7 @@ function awaremed_scripts() {
 
     wp_enqueue_style(
         'google-fonts',
-        'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@300;400;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@300;400;600;700;800&display=swap',
         array(),
         null
     );
@@ -146,6 +146,82 @@ add_filter( 'excerpt_length', 'awaremed_excerpt_length' );
 ------------------------------------------------------------------ */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+/* ------------------------------------------------------------------
+   Service Pages: Custom Rewrite Rules
+------------------------------------------------------------------ */
+function awaremed_add_service_rewrites() {
+    $slugs = array(
+        'functional-medicine', 'iv-therapy', 'regenerative-medicine',
+        'hormone-optimization', 'weight-management', 'preventive-care',
+        'diagnostic-testing', 'nutritional-therapy',
+    );
+    foreach ( $slugs as $slug ) {
+        add_rewrite_rule(
+            '^services/' . preg_quote( $slug, '/' ) . '/?$',
+            'index.php?awaremed_service=' . $slug,
+            'top'
+        );
+    }
+}
+add_action( 'init', 'awaremed_add_service_rewrites' );
+
+function awaremed_query_vars( $vars ) {
+    $vars[] = 'awaremed_service';
+    return $vars;
+}
+add_filter( 'query_vars', 'awaremed_query_vars' );
+
+function awaremed_service_template( $template ) {
+    $service = get_query_var( 'awaremed_service' );
+    if ( ! $service ) return $template;
+
+    $map = array(
+        'functional-medicine'    => 'service-functional-medicine',
+        'iv-therapy'             => 'service-iv-therapy',
+        'regenerative-medicine'  => 'service-regenerative-medicine',
+        'hormone-optimization'   => 'service-hormone-optimization',
+        'weight-management'      => 'service-gut-health',
+        'preventive-care'        => 'service-brain-cognitive',
+        'diagnostic-testing'     => 'service-chelation-detox',
+        'nutritional-therapy'    => 'service-skin-anti-aging',
+    );
+
+    if ( isset( $map[ $service ] ) ) {
+        $part = get_template_directory() . '/template-parts/' . $map[ $service ] . '.php';
+        if ( file_exists( $part ) ) {
+            return $part;
+        }
+    }
+    return $template;
+}
+add_filter( 'template_include', 'awaremed_service_template' );
+
+/* Service page SEO title */
+function awaremed_service_title( $title ) {
+    $service = get_query_var( 'awaremed_service' );
+    if ( ! $service ) return $title;
+    $labels = array(
+        'functional-medicine'   => 'Functional Medicine',
+        'iv-therapy'            => 'IV Therapy',
+        'regenerative-medicine' => 'Regenerative Medicine',
+        'hormone-optimization'  => 'Hormone Optimization',
+        'weight-management'     => 'Weight Management',
+        'preventive-care'       => 'Preventive Care',
+        'diagnostic-testing'    => 'Diagnostic Testing',
+        'nutritional-therapy'   => 'Nutritional Therapy',
+    );
+    if ( isset( $labels[ $service ] ) ) {
+        return array(
+            'title'   => $labels[ $service ] . ' — AWAREmed',
+            'page'    => '',
+            'tagline' => '',
+            'site'    => get_bloginfo( 'name' ),
+        );
+    }
+    return $title;
+}
+add_filter( 'document_title_parts', 'awaremed_service_title' );
 
 /* ------------------------------------------------------------------
    Custom Logo Helper

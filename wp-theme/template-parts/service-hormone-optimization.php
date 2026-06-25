@@ -1,76 +1,103 @@
-<?php $c = home_url( '/#contact' ); ?>
-<section id="hormone-optimization" class="section-soft service-section" aria-label="Hormone Optimization and BHRT">
+<?php
+$cta = home_url( '/#contact' );
+$related = array(
+  array( 'title' => 'Functional Medicine',  'slug' => 'functional-medicine' ),
+  array( 'title' => 'Weight Management',    'slug' => 'weight-management' ),
+  array( 'title' => 'Diagnostic Testing',  'slug' => 'diagnostic-testing' ),
+  array( 'title' => 'Nutritional Therapy', 'slug' => 'nutritional-therapy' ),
+);
+?>
+<?php get_header(); ?>
+<main id="main-content">
+
+<section class="service-hero" aria-label="Hormone Optimization">
   <div class="wrap">
-    <div class="section-label"><div class="section-label-bar green"></div><div><span class="eyebrow">Service</span><h2 style="margin-bottom:0">Hormone Optimization &amp; BHRT</h2></div></div>
-    <div class="prose" style="max-width:880px;margin-bottom:32px">
-      <p>Hormones influence energy, mood, sleep, metabolism, and much more. When you feel &ldquo;off&rdquo; but standard labs come back &ldquo;normal,&rdquo; it can be frustrating. At AWAREmed, hormone optimization begins with a careful look at your full hormonal picture &mdash; not just a single number.</p>
-      <p>Where appropriate, Dr. Akoury may discuss bioidentical hormone replacement therapy (BHRT) and lifestyle strategies designed to support balance, always individualized to your needs and monitored over time.</p>
-    </div>
-    <div class="notice"><strong>Please note:</strong> Hormone evaluation and therapy are individualized and require clinical assessment. This page is educational and is not a diagnosis or a treatment recommendation.</div>
-    <div class="split" style="margin-top:36px">
-      <div>
-        <span class="eyebrow">How We May Help</span><h3>What this support may include</h3>
-        <p>Every plan is personalized to your history, goals, and clinical findings. Depending on what is appropriate for you, care may include:</p>
-        <ul class="check">
-          <li>Comprehensive review of symptoms and relevant hormone testing</li>
-          <li>Personalized discussion of whether BHRT may be appropriate for you</li>
-          <li>Support for energy, sleep, mood, and overall well-being</li>
-          <li>Lifestyle and nutrition strategies that support hormonal balance</li>
-          <li>Ongoing monitoring and adjustment over time</li>
-          <li>Clear education so you understand each option and its considerations</li>
-        </ul>
-      </div>
-      <div><img src="https://assets.cdn.filesafe.space/VICaX0SdHaI41cp5dwWa/media/696a90397f301bde2a82dd54.jpeg" alt="Dr. Dalal Akoury reviewing a personalized care plan with a patient at AWAREmed in Johnson City, TN" width="520" height="400"></div>
-    </div>
-    <div style="max-width:760px;margin:36px auto 0">
-      <div class="center"><span class="eyebrow green">Your Journey</span><h3>What to expect</h3><p class="lead">A clear, unhurried process built around your story.</p></div>
-      <div class="steps" style="margin-top:24px">
-        <div class="step"><div class="n">1</div><div><h3>Symptom &amp; History Review</h3><p>We listen to how you feel and review your relevant history and lab work.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Personalized Assessment</h3><p>Dr. Akoury evaluates your full hormonal picture and discusses appropriate, individualized options.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Monitored Plan</h3><p>If therapy is appropriate, we monitor and adjust your plan over time for safety and comfort.</p></div></div>
-      </div>
-    </div>
-  </div>
-  <div class="section-green" style="margin-top:48px;padding:48px 0">
-    <div class="wrap">
-      <div class="split">
-        <div>
-          <span class="eyebrow green">Is This Right for You?</span><h3>Who this may be a good fit for</h3>
-          <ul class="check">
-            <li>You feel fatigued, foggy, or &ldquo;off&rdquo; despite &ldquo;normal&rdquo; labs</li>
-            <li>You are navigating perimenopause, menopause, or andropause</li>
-            <li>You want a careful, monitored approach to hormone support</li>
-            <li>You want options explained honestly, with risks and benefits</li>
-          </ul>
-          <p class="form-note" style="margin-top:16px">This list is for education only and is not a diagnosis. A consultation helps determine whether this approach is appropriate for you.</p>
-        </div>
-        <div class="card">
-          <h3>Physician-led, alongside your existing care</h3>
-          <p>Hormone optimization is personalized and monitored. Dr. Akoury reviews your history, discusses appropriate options, and coordinates with your other providers when relevant.</p>
-          <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green" style="margin-top:8px">Schedule a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrap" style="padding-top:48px">
-    <div class="center"><span class="eyebrow">Questions &amp; Answers</span><h3>Frequently Asked Questions</h3></div>
-    <div class="faq" style="max-width:840px;margin:30px auto 0">
-      <details><summary>What is BHRT?</summary><p>BHRT stands for bioidentical hormone replacement therapy. Whether it is appropriate for you is an individualized clinical decision discussed during your evaluation.</p></details>
-      <details><summary>My labs are &ldquo;normal&rdquo; &mdash; can you still help?</summary><p>Possibly. Dr. Akoury looks at the full picture, including your symptoms and history, not a single value in isolation.</p></details>
-      <details><summary>Is hormone therapy right for everyone?</summary><p>No. Hormone therapy is not appropriate for everyone. Risks and benefits are discussed individually, and care is monitored over time.</p></details>
-      <details><summary>Are outcomes guaranteed?</summary><p>No. Individual responses vary and outcomes are not guaranteed.</p></details>
-    </div>
-    <div style="margin-top:48px">
-      <div class="center"><span class="eyebrow green">Explore More</span><h3>Related Services</h3></div>
-      <div class="grid g3" style="margin-top:30px">
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#integrative-oncology' ) ); ?>"><h3>Integrative Oncology Support</h3><p>Supportive, whole-person care alongside your cancer treatment.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#iv-therapy' ) ); ?>"><h3>IV Therapy &amp; Hydration</h3><p>Physician-supervised hydration and nutrient support, personalized to you.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-        <a class="card svc-card" href="<?php echo esc_url( home_url( '/#regenerative-medicine' ) ); ?>"><h3>Regenerative Medicine</h3><p>Physician-led approaches that support recovery, vitality, and healthy aging.</p><span class="btn btn-outline btn-sm">Learn more</span></a>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;padding-bottom:8px">
-      <a href="<?php echo esc_url( $c ); ?>" class="btn btn-green">Explore a personalized hormone evaluation</a>
-      <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="btn btn-outline" style="margin-left:12px">Back to Services</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="<?php echo esc_url( home_url('/') ); ?>">Home</a><span aria-hidden="true">/</span>
+      <a href="<?php echo esc_url( home_url('/#services') ); ?>">Services</a><span aria-hidden="true">/</span>
+      <span class="current" aria-current="page">Hormone Optimization</span>
+    </nav>
+    <span class="eyebrow">Bioidentical Hormone Therapy (BHRT)</span>
+    <h1>Hormone Optimization</h1>
+    <p class="lead">Restore the hormonal balance that drives your energy, mood, metabolism, and vitality. Dr. Akoury's precision programs help both men and women feel their absolute best at every stage of life.</p>
+    <div class="service-hero-meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Bioidentical hormones</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Physician-supervised BHRT</span>
     </div>
   </div>
 </section>
+
+<section class="service-content">
+  <div class="wrap">
+    <div class="service-layout">
+      <div class="service-main">
+
+        <h2>The Importance of Hormonal Balance</h2>
+        <p>Hormones regulate virtually every function in the human body — from metabolism and energy production to mood, sleep, sexual function, bone density, and cognitive performance. When hormones fall out of balance, the effects are far-reaching and profoundly impact quality of life.</p>
+        <p>Hormonal decline is a natural part of aging, but it doesn't have to be accepted as inevitable. With precise testing and bioidentical hormone replacement therapy (BHRT), Dr. Akoury helps patients restore optimal hormonal levels — and with them, their vitality, clarity, and well-being.</p>
+
+        <h2>Signs You May Have a Hormonal Imbalance</h2>
+        <ul>
+          <li>Persistent fatigue despite adequate sleep</li>
+          <li>Weight gain — especially abdominal — despite diet and exercise</li>
+          <li>Decreased libido and sexual dysfunction</li>
+          <li>Mood swings, irritability, anxiety, or depression</li>
+          <li>Brain fog and difficulty concentrating</li>
+          <li>Hot flashes, night sweats, and sleep disturbances</li>
+          <li>Loss of muscle mass and decreased strength</li>
+          <li>Thinning hair, dry skin, or brittle nails</li>
+          <li>Irregular or absent menstrual cycles</li>
+        </ul>
+
+        <h2>What We Treat</h2>
+        <div class="benefit-cards">
+          <div class="benefit-card"><h4>Female Hormone Imbalance</h4><p>Perimenopause, menopause, PCOS, estrogen dominance, progesterone deficiency, and adrenal hormone dysfunction in women.</p></div>
+          <div class="benefit-card"><h4>Male Hormone Decline</h4><p>Testosterone deficiency (Low T), andropause, reduced vitality, erectile dysfunction, and age-related hormonal decline in men.</p></div>
+          <div class="benefit-card"><h4>Thyroid Disorders</h4><p>Hypothyroidism, hyperthyroidism, Hashimoto's thyroiditis, and subclinical thyroid dysfunction — including patients told "your levels are normal."</p></div>
+          <div class="benefit-card"><h4>Adrenal Health</h4><p>Adrenal fatigue, chronic stress-induced cortisol dysregulation, DHEA deficiency, and HPA-axis imbalance.</p></div>
+        </div>
+
+        <h2>Our Hormone Optimization Process</h2>
+        <div class="process-steps">
+          <div class="process-step"><div class="step-num">1</div><div class="step-content"><h4>Comprehensive Hormonal Panel</h4><p>We test far more than standard levels — including free and total testosterone, estradiol, progesterone, DHEA-S, cortisol (4-point saliva), full thyroid panel (TSH, free T3, free T4, reverse T3, thyroid antibodies), insulin, and more.</p></div></div>
+          <div class="process-step"><div class="step-num">2</div><div class="step-content"><h4>Symptom &amp; History Review</h4><p>Lab results are interpreted in the context of your symptoms, age, medical history, and lifestyle — because "optimal" is different from "within normal range."</p></div></div>
+          <div class="process-step"><div class="step-num">3</div><div class="step-content"><h4>Personalised BHRT Protocol</h4><p>We use bioidentical hormones — molecularly identical to those your body produces — in precise doses, forms (creams, pellets, injections), and schedules tailored to your needs.</p></div></div>
+          <div class="process-step"><div class="step-num">4</div><div class="step-content"><h4>Ongoing Monitoring &amp; Adjustment</h4><p>Hormone levels are re-tested regularly to fine-tune your protocol, ensuring optimal balance is maintained safely over time.</p></div></div>
+        </div>
+
+        <h2>Why Bioidentical vs. Synthetic Hormones?</h2>
+        <p>Bioidentical hormones are chemically identical to the hormones your body naturally produces. They are derived from natural plant sources (yam and soy) and compounded to match your precise needs. Many patients and physicians prefer bioidentical hormones because they are metabolised naturally by the body, often with a more favorable safety profile and fewer side effects than synthetic alternatives. Dr. Akoury customises every BHRT protocol based on your lab results, symptoms, risk factors, and goals.</p>
+
+      </div>
+
+      <aside class="service-sidebar">
+        <div class="sidebar-cta">
+          <h3>Reclaim Your Hormonal Vitality</h3>
+          <p>Book a comprehensive hormone evaluation with Dr. Akoury today.</p>
+          <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-primary">Book Consultation</a>
+          <div class="sidebar-contact"><a href="tel:+14234306170">(423) 430-6170</a></div>
+        </div>
+        <div class="related-services">
+          <h4>Related Services</h4>
+          <?php foreach ( $related as $svc ) : ?>
+          <a class="related-link" href="<?php echo esc_url( home_url('/services/'.$svc['slug'].'/') ); ?>">
+            <?php echo esc_html( $svc['title'] ); ?>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+          <?php endforeach; ?>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--grad-teal);padding:64px 0;text-align:center">
+  <div class="wrap">
+    <h2 style="color:#fff;margin-bottom:16px">Feel Like Yourself Again</h2>
+    <p style="color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 32px">Discover how precision hormone optimization can restore your energy, mood, and vitality. Book your consultation today.</p>
+    <a href="<?php echo esc_url( $cta ); ?>" class="btn btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff">Start Your Hormone Journey</a>
+  </div>
+</section>
+
+</main>
+<?php get_footer(); ?>
